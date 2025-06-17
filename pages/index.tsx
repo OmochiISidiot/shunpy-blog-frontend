@@ -24,7 +24,7 @@ export default function Home() {
     try {
       // Node.jsバックエンドのAPIを叩く！
       // ここで http://localhost:8080/api/posts にリクエストを送るんだ
-      const response = await fetch('http://localhost:8080/api/posts');
+      const response = await fetch('https://shunpy-blog-backend.onrender.com/api/posts');
 
       // HTTPステータスコードが200番台以外だったらエラーを投げる
       if (!response.ok) {
@@ -59,7 +59,7 @@ export default function Home() {
 
     try {
       // バックエンドの /api/posts エンドポイントにPOSTリクエストを送る
-      const response = await fetch('http://localhost:8080/api/posts', {
+      const response = await fetch('https://shunpy-blog-backend.onrender.com/api/posts', {
         method: 'POST', // POSTメソッドを指定
         headers: {
           'Content-Type': 'application/json', // リクエストボディがJSON形式だと教える
